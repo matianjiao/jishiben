@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/data.css">
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+
+    </script>
+</head>
+<body id="body">
+    <div class="panel panel-success zindex header">
+        <div class="panel-heading headerbg">
+            <h3 class="panel-title ">记事本</h3>
+        </div>
+        <div class="panel-body add">
+            <div class="glyphicon glyphicon-plus"></div>
+        </div>
+    </div>
+
+    <form class="zindex">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Title:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="title">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Content</label>
+            <textarea class="form-control" rows="3"></textarea>
+            <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Time</label>
+            <input type="date" id="time">
+        </div>
+        <button type="button" class="btn btn-default submit">Submit</button>
+    </form>
+
+
+    <div class="panel panel-default con">
+        <div class="glyphicon glyphicon-trash del"></div>
+        <div class="panel-heading tan">Title</div>
+        <div class="panel-body biaoti"></div>
+
+        <div class="panel-heading tan">Content</div>
+        <div class="panel-body con-con neirong"></div>
+
+        <div class="panel-heading tan">Time</div>
+        <div class="panel-body shijian"></div>
+    </div>
+
+
+</body>
+</html>

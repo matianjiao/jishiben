@@ -1,0 +1,104 @@
+//清除浮动
+.clear(){
+  &:before,&:after{
+    content: "";
+    display: block;
+  }
+  &:after{
+    clear: both;
+  }
+
+  //&>.row:before,&>.row:after{
+  //  content: "";
+  //  display: none;
+  //}
+  //&>.row:after{
+  //  clear: both;
+  //}
+  //
+  //
+  //&-fluid:before,&-fluid:after{
+  //  content: "";
+  //  display: none;
+  //}
+  //&-fluid:after{
+  //  clear: both;
+  //}
+  //&-fluid>.row:before,&-fluid>.row:after{
+  //  content: "";
+  //  display: none;
+  //}
+  //&-fluid>.row:after{
+  //  clear: both;
+  //}
+}
+
+
+//col-m-1    col-s-h ......
+.response(@type,@i:0) when (@i<=@col){
+  &>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@col*100%;
+  }
+  &-fluid>.row>.col-@{type}-@{i}{
+    float:left;
+    width:@i/@col*100%;
+  }
+  &>.row>.col-@{type}-left-@{i}{
+    position: relative;
+    left:-@i/@col*100%;
+  }
+  &-fluid>.row>.col-@{type}-left-@{i}{
+    position: relative;
+    left:-@i/@col*100%;
+  }
+  &>.row>.col-@{type}-right-@{i}{
+    position: relative;
+    left:@i/@col*100%;
+  }
+  &-fluid>.row>.col-@{type}-right-@{i}{
+    position: relative;
+    left:@i/@col*100%;
+  }
+  .response(@type,@i+1);
+}
+
+
+//小  中  大  公共部分
+.public(){
+  width: @num1*1px-100px;
+  margin: 0 auto;
+  .clear();
+  &-fluid {
+    width: 100%;
+    .clear();
+  }
+  &>.row {
+    width: 100%;
+    .clear();
+  }
+  &-fluid >.row {
+    .clear();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

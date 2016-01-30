@@ -1,0 +1,87 @@
+@import "var1";
+@import "base";
+@import "funs1";
+
+*{
+  box-sizing: border-box;
+}
+*[text-l]{
+  text-align: left;
+}
+*[text-c]{
+  text-align: center;
+}
+*[text-r]{
+  text-align: right;
+}
+//-----------------------------------------------------
+
+.container{
+  .response(s);
+  //.public();
+}
+
+//小屏
+.container{
+  @media screen and (max-width: @num1) {
+    .public();
+    &>.row>.col-s-v{
+      display: block;
+    }
+    &>.row>.col-s-h{
+      display: none;
+    }
+    &-fluid>.row>.col-s-v{
+      display: block;
+    }
+    &-fluid>.row>.col-s-h{
+      display: none;
+    }
+    .response(s);
+  }
+}
+
+
+
+//中屏
+.container{
+  @media screen and (min-width: @num1) and (max-width:@num2) {
+    .public();
+    width: @num1;
+    &>.row>.col-m-v{
+      display: block;
+    }
+    &>.row>.col-m-h{
+      display: none;
+    }
+    &-fluid>.row>.col-m-v{
+      display: block;
+    }
+    &-fluid>.row>.col-m-h{
+      display: none;
+    }
+    .response(m);
+  }
+}
+
+
+//大屏
+.container{
+  @media screen and (min-width: @num2){
+    .public();
+    width: @num2;
+    &>.row>.col-l-v{
+      display: block;
+    }
+    &>.row>.col-l-h{
+      display: none;
+    }
+    &-fluid>.row>.col-l-v{
+      display:block;
+    }
+    &-fluid>.row>.col-l-h{
+      display:none;
+    }
+    .response(l);
+  }
+}
